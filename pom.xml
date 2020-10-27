@@ -4,11 +4,15 @@
 
   <groupId>com.misolab</groupId>
   <artifactId>multi-archetype</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>maven-archetype</packaging>
   <description>Java Multi model project archetype by Misolab</description>
   <url>https://github.com/misolab/java-multi-archetype</url>
   <name>java-multi-archetype</name>
+
+  <properties>
+    <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
+  </properties>
 
   <build>
     <extensions>
@@ -51,5 +55,41 @@
     <connection>scm:git:https://github.com/misolab/java-multi-archetype.git</connection>
     <developerConnection>scm:git:https://github.com/misolab/java-multi-archetype.git</developerConnection>
   </scm>
+
+  <profiles>
+    <!-- mvn xxx -Prelease -->
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <!-- GPG -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven-gpg-plugin.version}</version>
+            <executions>
+              <execution>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+
+      <distributionManagement>
+        <snapshotRepository>
+          <id>ossrh</id>
+          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+          <id>ossrh</id>
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+      </distributionManagement>
+    </profile>
+  </profiles>
 
 </project>
