@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    include: log
+
+#logging:
+#  file:
+#    name: @project.basedir@/../log/site.log
+
+---
+spring.profiles: dev
+
+#logging:
+#  file:
+#    name: @project.basedir@/../log/site-dev.log
+
+#spring:
+#  datasource:
+#    username: appregen1
+#    password: whdlstmpre
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:sqlserver://10.50.109.61:1509;database=MnBContent_DB
+#  jpa:
+#    database: sql_server
+#    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+#    hibernate:
+#      ddl-auto: validate
+##      naming:
+##        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+##        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    generate-ddl: false
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true

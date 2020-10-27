@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.misolab</groupId>
+  <artifactId>multi-archetype</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+  <description>Java Multi model project archetype by Misolab</description>
+  <url>https://github.com/misolab/java-multi-archetype</url>
+  <name>java-multi-archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.2.0</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.2.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <developers>
+    <developer>
+      <name>Do Ockhyun</name>
+      <email>do.ockhyun@gmail.com</email>
+      <organization>misolab</organization>
+      <organizationUrl>misolab.com</organizationUrl>
+      <timezone>GMT+0900</timezone>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/misolab/java-multi-archetype</url>
+    <connection>scm:git:https://github.com/misolab/java-multi-archetype.git</connection>
+    <developerConnection>scm:git:https://github.com/misolab/java-multi-archetype.git</developerConnection>
+  </scm>
+
+</project>

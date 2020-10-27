@@ -1,0 +1,30 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SITE</title>
+    <script th:src="@{/webjars/vue/vue.min.js}"></script>
+</head>
+<body>
+<div id="app">
+    <p @click="showAlert" th:text="${symbol_dollar}{msg}">This is Site Index Page</p>
+    <p th:text="${symbol_dollar}{current}">00:00</p>
+</div>
+
+<script>
+const app = new Vue({
+    el: "${symbol_pound}app",
+    data: {},
+    methods: {
+        showAlert() {
+            alert();
+        }
+    }
+})
+</script>
+
+</body>
+</html>

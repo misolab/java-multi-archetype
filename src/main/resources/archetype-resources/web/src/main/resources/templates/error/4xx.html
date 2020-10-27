@@ -1,0 +1,19 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error 4XX</title>
+</head>
+<body>
+
+<p th:text="${symbol_dollar}{timestamp}">timestamp</p>
+<p th:text="${symbol_dollar}{status}">status</p>
+<p th:text="${symbol_dollar}{error}">error</p>
+<p th:text="${symbol_dollar}{message}">message</p>
+<p th:text="${symbol_dollar}{path}">path</p>
+
+</body>
+</html>
