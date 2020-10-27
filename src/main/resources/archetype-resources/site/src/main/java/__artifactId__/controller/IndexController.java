@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.${artifactId}.controller;
 
-import ${groupId}.core.exception.BadRequestException;
+import com.misolab.core.exception.BadRequestException;
 import ${package}.domain.dao.MemberDao;
 import ${package}.domain.entity.Member;
 import ${package}.domain.repository.MemberRepository;

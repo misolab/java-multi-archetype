@@ -16,9 +16,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.misolab.multi</groupId>
+            <groupId>${groupId}.multi</groupId>
             <artifactId>web</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${version}</version>
         </dependency>
     </dependencies>
 
