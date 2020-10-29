@@ -7,7 +7,7 @@
         <version>${version}</version>
     </parent>
 
-    <groupId>${groupId}.multi</groupId>
+    <groupId>${groupId}.${rootArtifactId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <name>${artifactId}</name>
@@ -16,7 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>${groupId}.multi</groupId>
+            <groupId>${groupId}.${rootArtifactId}</groupId>
             <artifactId>web</artifactId>
             <version>${version}</version>
         </dependency>
