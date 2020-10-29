@@ -4,6 +4,7 @@
 package ${package}.${artifactId}.controller;
 
 import com.misolab.core.exception.BadRequestException;
+import com.misolab.core.vo.ApiResponse;
 import ${package}.domain.dao.MemberDao;
 import ${package}.domain.entity.Member;
 import ${package}.domain.repository.MemberRepository;
@@ -44,7 +45,9 @@ public class IndexController {
         memberRepository.save(member);
 
         List<Member> result = memberDao.allMembers();
-        List<MemberDto> response = result.stream().map(MemberDto::new).collect(Collectors.toList());
+        List<MemberDto> list = result.stream().map(MemberDto::new).collect(Collectors.toList());
+
+        ApiResponse response = ApiResponse.of("list", list);
         return ResponseEntity.ok(response);
     }
 
