@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.misolab/java-multi-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.misolab/java-multi-archetype)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.misolab/multi-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.misolab/multi-archetype)
 
 
 ## Misolab Java multi module project archetype
