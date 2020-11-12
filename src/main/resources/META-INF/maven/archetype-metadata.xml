@@ -146,15 +146,10 @@
           <directory>front/src</directory>
           <includes>
             <include>**/*.svg</include>
+            <include>**/*.png</include>
             <include>**/*.vue</include>
             <include>**/*.js</include>
             <include>**/*.less</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>front/config</directory>
-          <includes>
-            <include>**/*.js</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
@@ -164,32 +159,13 @@
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">
-          <directory>front/mock</directory>
-          <includes>
-            <include>**/*.js</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>front/deploy</directory>
-          <includes>
-            <include>**/*.conf</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
           <directory>front</directory>
           <includes>
             <include>**/*.</include>
-            <include>**/*.preview</include>
-            <include>**/*.development</include>
-            <include>**/*.production</include>
-            <include>**/*.browserslistrc</include>
             <include>**/*.gitignore</include>
             <include>**/*.md</include>
-            <include>**/*.analyz</include>
             <include>**/*.js</include>
-            <include>**/*.editorconfig</include>
             <include>**/*.json</include>
-            <include>**/*.env</include>
           </includes>
         </fileSet>
         <fileSet encoding="UTF-8">

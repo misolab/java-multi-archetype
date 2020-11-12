@@ -1,25 +1,28 @@
 <template>
-  <a-config-provider :locale="locale">
-    <div id="app">
-      <router-view />
-    </div>
-  </a-config-provider>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  </div>
 </template>
 
 <script>
-import { domTitle, setDocumentTitle } from '@/utils/domUtil'
-import { i18nRender } from '@/locales'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  computed: {
-    locale () {
-      // sync dom title
-      const { title } = this.$route.meta
-      title && (setDocumentTitle(`${i18nRender(title)} - ${domTitle}`))
-
-      return this.$i18n.getLocaleMessage(this.$store.getters.lang).antLocale
-    },
-  },
+  components: {
+    HelloWorld
+  }
 }
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
