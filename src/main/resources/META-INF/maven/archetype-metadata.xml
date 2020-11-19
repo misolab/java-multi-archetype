@@ -21,6 +21,36 @@
     </fileSet>
   </fileSets>
   <modules>
+    <module id="common" dir="common" name="common">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.properties</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory></directory>
+          <includes>
+            <include>README.md</include>
+            <include>.gitignore</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
     <module id="domain" dir="domain" name="domain">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
