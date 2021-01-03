@@ -4,7 +4,7 @@
 
   <groupId>com.misolab</groupId>
   <artifactId>multi-archetype</artifactId>
-  <version>0.0.5</version>
+  <version>0.1.0</version>
   <packaging>maven-archetype</packaging>
   <description>Java Multi model project archetype by Misolab</description>
   <url>https://github.com/misolab/java-multi-archetype</url>
