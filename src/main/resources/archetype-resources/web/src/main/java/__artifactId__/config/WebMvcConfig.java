@@ -16,10 +16,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
         @PropertySource(value = "classpath:/resource-${spring.profiles.active}.properties", ignoreResourceNotFound = true) })
 public class WebMvcConfig implements WebMvcConfigurer {
 
-    @Value("$(symbol_dollar){resources.location:}")
+    @Value("${symbol_dollar}{resources.location:}")
     private String resourcesLocation;
 
-    @Value("$(symbol_dollar){resources.uri_path:}")
+    @Value("${symbol_dollar}{resources.uri_path:}")
     private String resourcesUriPath;
 
     @Override
