@@ -5,9 +5,11 @@ package ${package}.${artifactId}.util;
 
 import lombok.val;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class DateTimeUtils {
@@ -54,6 +56,12 @@ public class DateTimeUtils {
         val std = getTime(t1, format);
         val other = getTime(t2, format);
         return std.isAfter(other);
+    }
+
+    public static String toString(long milli, String format) {
+        val fmt = DateTimeFormatter.ofPattern(format);
+        LocalDateTime dt = LocalDateTime.ofInstant(Instant.ofEpochMilli(milli), ZoneId.systemDefault());
+        return dt.format(fmt);
     }
 
 }

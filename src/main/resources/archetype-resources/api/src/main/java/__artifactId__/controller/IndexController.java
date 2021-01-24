@@ -1,24 +1,28 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.${artifactId}.config;
+package ${package}.${artifactId}.controller;
 
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import lombok.RequiredArgsConstructor;
+import ${package}.common.util.DateTimeUtils;
+import ${package}.web.vo.ApiResponse;
 
-import ${package}.web.config.WebSecurityConfig;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@EnableWebSecurity
-public class AdminSecurityConfig extends WebSecurityConfig {
+@RequiredArgsConstructor
+@RestController
+@RequestMapping("/api")
+public class IndexController {
 
-    String[] permitUrl = { "/", "/ajax" , "/api/user/ip", "/api/user/login", "/api/user/logout" };
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .csrf().disable()
-            .authorizeRequests()
-                .antMatchers(permitUrl).permitAll()
-                .anyRequest().authenticated();
+    @GetMapping
+    public ResponseEntity<Object> index() {
+        ApiResponse response = ApiResponse.of("result", true)
+                .add("message", "This is api module")
+                .add("current", DateTimeUtils.toString(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss"));
+        return response.toResponseEntity();
     }
 }
+
