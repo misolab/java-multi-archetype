@@ -4,6 +4,7 @@
 package ${package}.${artifactId}.config;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import ${package}.web.config.WebSecurityConfig;
@@ -12,6 +13,12 @@ import ${package}.web.config.WebSecurityConfig;
 public class AdminSecurityConfig extends WebSecurityConfig {
 
     String[] permitUrl = { "/", "/ajax" , "/api/user/ip", "/api/user/login", "/api/user/logout" };
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        super.configure(web);
+        web.ignoring().antMatchers("/manifest.json", "/img/**", "/**/*.woff", "/**/*.ttf", "/**/*.ico");
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
