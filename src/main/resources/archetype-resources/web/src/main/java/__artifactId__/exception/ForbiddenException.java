@@ -12,14 +12,14 @@ public class ForbiddenException extends ApiException {
     /**
      *
      */
-    public BadRequestException() {
+    public ForbiddenException() {
         super(ApiStatus.FORBIDDEN, "");
     }
 
     /**
      * @param message
      */
-    public BadRequestException(String message) {
+    public ForbiddenException(String message) {
         super(ApiStatus.FORBIDDEN, message);
     }
 }

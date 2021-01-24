@@ -1,31 +1,25 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.${artifactId}.controller;
+package ${package}.${artifactId}.config;
 
-import lombok.RequiredArgsConstructor;
-import ${package}.common.util.DateTimeUtils;
-import ${package}.web.vo.ApiResponse;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import ${package}.web.config.WebSecurityConfig;
 
-@RequiredArgsConstructor
-@Controller
-public class IndexController {
+@EnableWebSecurity
+public class AdminSecurityConfig extends WebSecurityConfig {
 
-    @GetMapping(value = {"/", "/login"})
-    public String entry() {
-        return "index";
-    }
+    String[] permitUrl = { "/", "/ajax" , "/api/user/ip", "/api/user/login", "/api/user/logout" };
 
-    @GetMapping("/ajax")
-    public ResponseEntity<Object> index() {
-        ApiResponse response = ApiResponse.of("result", true)
-                .add("message", "This is admin module")
-                .add("current", DateTimeUtils.toString(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss"));
-        return response.toResponseEntity();
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .csrf().disable()
+            .authorizeRequests()
+                .antMatchers(permitUrl).permitAll()
+                .anyRequest().authenticated();
     }
 }
 
