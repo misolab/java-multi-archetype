@@ -68,7 +68,7 @@ public class ApiResponse {
         return this;
     }
 
-    public ResponseEntity toResponseEntity() {
+    public ResponseEntity<Object> toResponseEntity() {
         if (!CheckUtils.isEmpty(error)) {
             return ResponseEntity
                     .status((int) error.get("code"))

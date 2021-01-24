@@ -1,28 +1,24 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.${artifactId}.controller;
+package ${package}.${artifactId}.config;
 
-import ${package}.domain.entity.Member;
-import ${package}.web.dto.MemberDto;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
-@RequiredArgsConstructor
-@RestController
-@RequestMapping("/${artifactId}")
-public class IndexController {
+import ${package}.web.config.WebSecurityConfig;
 
-    @GetMapping
-    public ResponseEntity index(String msg) {
-        Member member = new Member();
-        member.setName(msg);
-        member.setUserId(msg);
+@EnableWebSecurity
+public class AdminSecurityConfig extends WebSecurityConfig {
 
-        MemberDto memberDto = new MemberDto(member);
-        return ResponseEntity.ok(memberDto);
+    String[] permitUrl = { "/", "/ajax" , "/api/user/ip", "/api/user/login", "/api/user/logout" };
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .csrf().disable()
+            .authorizeRequests()
+                .antMatchers(permitUrl).permitAll()
+                .anyRequest().authenticated();
     }
 }
