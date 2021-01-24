@@ -30,18 +30,22 @@
             <scope>runtime</scope>
         </dependency>
 
-        <dependency>
+        <!-- <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency> -->
 
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
+        <!-- <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency> -->
+
+        <!-- <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency> -->
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
