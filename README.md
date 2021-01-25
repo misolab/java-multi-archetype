@@ -12,7 +12,7 @@ mvn archetype:generate              \
   -DarchetypeCatalog=local          \
   -DarchetypeGroupId=com.misolab    \
   -DarchetypeArtifactId=multi-archetype \
-  -DarchetypeVersion=0.1.1-SNAPSHOT          \
+  -DarchetypeVersion=0.1.1          \
   -DgroupId=net.joins               \
   -Dversion=1.0-SNAPSHOT            \
   -DartifactId=example  
