@@ -15,7 +15,7 @@
       <includes>
         <include>mvnw.cmd</include>
         <include>README.md</include>
-        <include>.gitignore</include>
+        <include>__gitignore__</include>
         <include>mvnw</include>
       </includes>
     </fileSet>
@@ -46,7 +46,6 @@
           <directory></directory>
           <includes>
             <include>README.md</include>
-            <include>.gitignore</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -76,7 +75,6 @@
           <directory></directory>
           <includes>
             <include>README.md</include>
-            <include>.gitignore</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -106,7 +104,6 @@
           <directory></directory>
           <includes>
             <include>README.md</include>
-            <include>.gitignore</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -141,7 +138,6 @@
           <directory></directory>
           <includes>
             <include>README.md</include>
-            <include>.gitignore</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -201,7 +197,7 @@
         <fileSet encoding="UTF-8">
           <directory></directory>
           <includes>
-            <include>.gitignore</include>
+            <include>README.md</include>
           </includes>
         </fileSet>
       </fileSets>
@@ -229,7 +225,7 @@
         <fileSet encoding="UTF-8">
           <directory></directory>
           <includes>
-            <include>.gitignore</include>
+            <include>README.md</include>
           </includes>
         </fileSet>
       </fileSets>
