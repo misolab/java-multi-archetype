@@ -51,3 +51,10 @@ ehthumbs_vista.db
 ### VS Code ###
 .vscode
 
+### admin/front ###
+admin/front/node
+admin/front/node_modules
+admin/front/dist
+# resources
+admin/src/main/resources/static
+admin/src/main/resources/templates
