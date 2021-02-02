@@ -19,7 +19,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         @PropertySource(value = "classpath:/datasource-${symbol_dollar}{spring.profiles.active}.properties", ignoreResourceNotFound = true)
 })
 @MapperScan(basePackages = {"${package}.${artifactId}.mapper"})
-@EnableJpaRepositories(basePackages = {"${groupId}"})
 @EntityScan(basePackages = {"${package}.${artifactId}.entity"})
+@EnableJpaRepositories(basePackages = {"${groupId}"})
 public class DataSourceConfig {
 }

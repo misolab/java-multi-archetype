@@ -20,6 +20,7 @@
       </includes>
     </fileSet>
   </fileSets>
+
   <modules>
     <module id="common" dir="common" name="common">
       <fileSets>
@@ -50,6 +51,7 @@
         </fileSet>
       </fileSets>
     </module>
+
     <module id="domain" dir="domain" name="domain">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -63,6 +65,7 @@
           <includes>
             <include>**/*.xml</include>
             <include>**/*.properties</include>
+            <include>**/*.sql</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -79,6 +82,7 @@
         </fileSet>
       </fileSets>
     </module>
+
     <module id="web" dir="web" name="web">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -108,6 +112,7 @@
         </fileSet>
       </fileSets>
     </module>
+
     <module id="site" dir="site" name="site">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -142,6 +147,7 @@
         </fileSet>
       </fileSets>
     </module>
+
     <module id="admin" dir="admin" name="admin">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -202,6 +208,7 @@
         </fileSet>
       </fileSets>
     </module>
+
     <module id="api" dir="api" name="api">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
