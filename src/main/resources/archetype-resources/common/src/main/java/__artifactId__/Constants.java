@@ -13,6 +13,7 @@ public interface Constants {
 
     String PLUS = "+";
     String ESCAPE_SPACE = "%20";
+    String COMMA = ",";
 
     String FILE_SEPARATOR = System.getProperty("file.separator");
     String LINE_SEPARATOR = System.getProperty("line.separator");
@@ -33,4 +34,5 @@ public interface Constants {
     String HTTP_METHOD_OPTIONS = "OPTIONS";
     String HTTP_METHOD_TRACE = "TRACE";
 
+    String X_TOKEN = "X-Token";
 }

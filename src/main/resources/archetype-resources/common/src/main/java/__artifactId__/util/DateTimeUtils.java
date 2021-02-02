@@ -11,6 +11,11 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.Duration;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAmount;
+
 
 public class DateTimeUtils {
 
@@ -63,5 +68,16 @@ public class DateTimeUtils {
         LocalDateTime dt = LocalDateTime.ofInstant(Instant.ofEpochMilli(milli), ZoneId.systemDefault());
         return dt.format(fmt);
     }
+
+    public static long parse(String timeUnit) {
+        TemporalAmount amount;
+        if (Character.isUpperCase(timeUnit.charAt(timeUnit.length() - 1))) {
+            amount = Period.parse("P" + timeUnit);
+        } else {
+            amount = Duration.parse("PT" + timeUnit);
+        }
+        return amount.get(ChronoUnit.SECONDS) * 1000;
+    }
+
 
 }
