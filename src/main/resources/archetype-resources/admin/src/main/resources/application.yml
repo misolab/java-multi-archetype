@@ -1,2 +1,10 @@
 server:
   port: 8090
+
+app:
+  jwt:
+    secret: jwt-admin-secret
+    limit: 1h
+  ldap:
+    principal: uid=%s,dc=example,dc=com
+    providerUrl: ldap://ldap.forumsys.com
