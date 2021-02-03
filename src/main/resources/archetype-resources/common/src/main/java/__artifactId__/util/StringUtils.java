@@ -83,4 +83,19 @@ public class StringUtils {
     public static boolean isEmpty(String value) {
         return !isNotEmpty(value);
     }
+
+    public static boolean contains(String value, String s) {
+        if (isNotEmpty(value) && isNotEmpty(s)) {
+            return value.contains(s);
+        }
+        return false;
+    }
+
+    public static boolean equals(String src, String dest) {
+        if (isNotEmpty(src) && isNotEmpty(dest)) {
+            return src.equals(dest);
+            // return src.contentEquals(dest);
+        }
+        return false;
+    }
 }

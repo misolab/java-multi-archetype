@@ -72,18 +72,18 @@ public class LDAPAuthenticator {
     }
 
     /**
-     * @param userId
+     * @param username
      * @param password
      * @return
      */
-    public Result login(String userId, String password) {
+    public Result login(String username, String password) {
 //        https://stackoverflow.com/a/12370710
         if (StringUtils.isEmpty(password)) {
             return Result.E52e;
         }
 
         try {
-            initLdapContext(userId, password);
+            initLdapContext(username, password);
         } catch (Exception e) {
             log.debug(e.getMessage());
 

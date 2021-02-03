@@ -70,7 +70,7 @@ public class ListUtils {
      * @param value
      * @return
      */
-    public static List<?> asList(String value) {
+    public static List<String> asList(String value) {
         return asList(value, Constants.COMMA);
     }
 
@@ -80,7 +80,7 @@ public class ListUtils {
      * @param regex - 정규식으로
      * @return
      */
-    public static List<?> asList(String value, String regex) {
+    public static List<String> asList(String value, String regex) {
         if (value == null) {
             return null;
         }

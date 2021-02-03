@@ -12,6 +12,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.util.Assert;
+
+import ${package}.common.Constants;
+import ${package}.common.util.StringUtils;
+
+
 @Table(name = "TB_MEMBER", indexes = {
         @Index(name = "IDX_USERNAME", columnList = "USERNAME")
 })
@@ -35,5 +41,28 @@ public class Member {
 
     @Column(name = "ALLOW_IP")
     String allowIp;
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public boolean enableLogin() {
+        return errorCount < Constants.MEMBER_ERROR_COUNT;
+    }
+
+    public boolean enableIp(String ipAddress) {
+        return StringUtils.contains(allowIp, ipAddress);
+    }
+
+    public void reset(String token) {
+        Assert.hasText(token, "token must not be empty");
+        errorCount = 0;
+        this.token = token;
+    }
+
+    public boolean matchToken(String value) {
+        return StringUtils.equals(token, value);
+    }
+
 }
 

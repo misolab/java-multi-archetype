@@ -35,4 +35,7 @@ public interface Constants {
     String HTTP_METHOD_TRACE = "TRACE";
 
     String X_TOKEN = "X-Token";
+
+    Integer MEMBER_ERROR_COUNT = 5;
+
 }
