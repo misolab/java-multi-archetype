@@ -3,15 +3,14 @@
 #set( $symbol_escape = '\' )
 package ${package}.${artifactId}.controller;
 
-import lombok.RequiredArgsConstructor;
 import ${package}.common.util.DateTimeUtils;
 import ${package}.web.vo.ApiResponse;
+import ${package}.common.util.StringUtils;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@RequiredArgsConstructor
 @Controller
 public class IndexController {
 
@@ -20,11 +19,17 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/ajax")
-    public ResponseEntity<Object> index() {
-        ApiResponse response = ApiResponse.of("result", true)
-                .add("message", "This is admin module")
-                .add("current", DateTimeUtils.toString(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss"));
+    @GetMapping("/hello")
+    public ResponseEntity<Object> index(String error) {
+        ApiResponse response;
+        if (StringUtils.isNotEmpty(error)) {
+            response = ApiResponse.of().error(500, error);
+        } else {
+            response = ApiResponse.of()
+                    .add("message", "This is admin module")
+                    .add("current", DateTimeUtils.toString(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss"));
+        }
+
         return response.toResponseEntity();
     }
 }

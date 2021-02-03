@@ -19,7 +19,7 @@ public class IndexController {
 
     @GetMapping
     public ResponseEntity<Object> index() {
-        ApiResponse response = ApiResponse.of("result", true)
+        ApiResponse response = ApiResponse.of()
                 .add("message", "This is api module")
                 .add("current", DateTimeUtils.toString(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss"));
         return response.toResponseEntity();

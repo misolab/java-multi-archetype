@@ -38,7 +38,7 @@ public class RequestUtil {
         if (idx > -1) {
             ip = ip.substring(0, idx);
         }
-        log.info("Result : IP Address {}} ", ip);
+        log.info("Result : IP Address {} ", ip);
         return ip;
     }
 }

@@ -31,7 +31,7 @@ public class AdminSecurityConfig extends WebSecurityConfig {
         return new AuthenticationErrorHandler();
     }
 
-    String[] permitUrl = { "/", "/ajax" , "/api/user/ip", "/api/user/login", "/api/user/logout" };
+    String[] permitUrl = { "/", "/hello" , "/api/user/ip", "/api/user/login", "/api/user/logout" };
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -59,9 +59,9 @@ public class AdminSecurityConfig extends WebSecurityConfig {
             .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
-                .addFilterAt(authenticationFilter(), UsernamePasswordAuthenticationFilter.class);
-        // .exceptionHandling()
-        //     .authenticationEntryPoint(authenticationErrorHandler());
+                .addFilterAt(authenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+         .exceptionHandling()
+             .authenticationEntryPoint(authenticationErrorHandler());
     }
 }
 

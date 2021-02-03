@@ -55,13 +55,16 @@ public class Member {
     }
 
     public void reset(String token) {
-        Assert.hasText(token, "token must not be empty");
         errorCount = 0;
         this.token = token;
     }
 
     public boolean matchToken(String value) {
         return StringUtils.equals(token, value);
+    }
+
+    public void addError() {
+        errorCount += 1;
     }
 
 }

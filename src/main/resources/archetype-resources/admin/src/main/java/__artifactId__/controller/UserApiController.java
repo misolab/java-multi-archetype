@@ -69,7 +69,7 @@ public class UserApiController {
     public ResponseEntity<Object> logout(@CurrentUser UserInfo userInfo) {
         memberService.resetToken(userInfo.getToken());
 
-        ApiResponse response = ApiResponse.of("result", true);
+        ApiResponse response = ApiResponse.of().add("result", true);
         return response.toResponseEntity();
     }
 

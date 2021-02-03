@@ -17,10 +17,9 @@ public class WebErrorAttributes extends DefaultErrorAttributes {
     public Map<String, Object> getErrorAttributes(WebRequest ${artifactId}Request, boolean includeStackTrace) {
         Map<String, Object> result = super.getErrorAttributes(${artifactId}Request, includeStackTrace);
 
-        Map<String, Object> error = new HashMap<>();
-        error.put("code", result.get("status"));
-        error.put("message", result.get("message"));
-        result.put("error", error);
+        //  code, message 추가해서 ApiResponse 구조를 만들자
+        result.put("code", result.get("status"));
+        result.put("message", result.get("message"));
         return result;
     }
 

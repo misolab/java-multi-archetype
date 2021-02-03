@@ -3,10 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package}.${artifactId}.vo;
 
-import ${package}.common.util.CheckUtils;
-import ${package}.${artifactId}.exception.ApiException;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import ${package}.web.ApiStatus;
+import ${package}.web.exception.ApiException;
 import org.springframework.http.ResponseEntity;
 
 import java.util.HashMap;
@@ -16,29 +15,35 @@ import java.util.Map;
  * @author ock
  */
 @Getter
-@NoArgsConstructor
 public class ApiResponse {
 
+    int code;
+    String message;
     Map<String, Object> data;
-    Map<String, Object> error;
 
     /**
      * @param data
      */
     public ApiResponse(Map<String, Object> data) {
+        this.code = ApiStatus.SUCCESS.getCode();
         this.data = data;
+    }
+
+    public static ApiResponse of() {
+        return new ApiResponse(new HashMap<>());
     }
 
     public static ApiResponse of(Map<String, Object> data) {
         return new ApiResponse(data);
     }
 
-    public static ApiResponse of(String key, Object value) {
-        return new ApiResponse().add(key, value);
+    public ApiResponse(int code, String message) {
+        this.code = code;
+        this.message = message;
     }
 
     public static ApiResponse error(ApiException exception) {
-        return new ApiResponse().error(exception.getCode(), exception.getMessage());
+        return new ApiResponse(exception.getCode(), exception.getMessage());
     }
 
     /**
@@ -60,20 +65,17 @@ public class ApiResponse {
      * @return
      */
     public ApiResponse error(int code, String message) {
-        if (error == null) {
-            error = new HashMap<>();
-        }
-        error.put("code", code);
-        error.put("message", message);
+        this.code = code;
+        this.message = message;
         return this;
     }
 
     public ResponseEntity<Object> toResponseEntity() {
-        if (!CheckUtils.isEmpty(error)) {
+        if (code != ApiStatus.SUCCESS.getCode()) {
             return ResponseEntity
-                    .status((int) error.get("code"))
-                    .body(error);
+                    .status(code)
+                    .body(this);
         }
-        return ResponseEntity.ok(data);
+        return ResponseEntity.ok(this);
     }
 }

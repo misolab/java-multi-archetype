@@ -106,6 +106,9 @@ public class AdminAuthenticationProvider implements WebAuthenticationProvider {
         // ldap
         Result result = ldap.login(username, password);
         if (!result.isOk()) {
+            member.addError();
+            memberService.update(member);
+
             throw new BadCredentialsException(result.getMessage());
         }
 
