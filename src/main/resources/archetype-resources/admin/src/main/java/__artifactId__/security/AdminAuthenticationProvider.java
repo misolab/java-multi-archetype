@@ -78,7 +78,7 @@ public class AdminAuthenticationProvider implements WebAuthenticationProvider {
         }
 
         String roles = member.getRoles();
-        UserInfo userInfo = UserInfo.builder().username(username).token(token).roles(roles).build();
+        UserInfo userInfo = UserInfo.builder().name(username).token(token).roles(roles).build();
 
         return makeAuthentication(userInfo, token, roles);
     }
@@ -114,7 +114,8 @@ public class AdminAuthenticationProvider implements WebAuthenticationProvider {
 
         String roles = member.getRoles();
         String token = jwtUtil.encode(username, "roles", roles);
-        UserInfo userInfo = UserInfo.builder().username(username).token(token).roles(roles).build();
+        //  TODO :
+        UserInfo userInfo = UserInfo.builder().name(username).token(token).roles(roles).build();
 
         // update token
         member.reset(token);

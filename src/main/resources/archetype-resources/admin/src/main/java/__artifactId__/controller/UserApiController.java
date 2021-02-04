@@ -75,7 +75,7 @@ public class UserApiController {
 
     @GetMapping("/info")
     public ResponseEntity<Object> info(@CurrentUser UserInfo userInfo) {
-        log.info("userInfo {}", userInfo.getUsername());
+        log.info("userInfo {}", userInfo.getName());
 
         ApiResponse response = ApiResponse.of(userInfo.toMap());
         return response.toResponseEntity();

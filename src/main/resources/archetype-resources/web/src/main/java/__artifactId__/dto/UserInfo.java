@@ -18,13 +18,13 @@ public class UserInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    String username;
+    String name;
     String token;
     String roles;
 
     public Map<String, Object> toMap() {
         Map<String, Object> result = new HashMap<>();
-        result.put("username", username);
+        result.put("name", name);
         result.put("token", token);
         result.put("roles", roles);
         return result;
