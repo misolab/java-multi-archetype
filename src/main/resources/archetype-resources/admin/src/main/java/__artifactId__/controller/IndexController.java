@@ -4,8 +4,8 @@
 package ${package}.${artifactId}.controller;
 
 import ${package}.common.util.DateTimeUtils;
-import ${package}.web.vo.ApiResponse;
 import ${package}.common.util.StringUtils;
+import ${package}.webapp.vo.ApiResponse;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

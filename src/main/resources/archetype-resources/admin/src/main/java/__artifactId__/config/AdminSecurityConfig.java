@@ -11,10 +11,10 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import lombok.RequiredArgsConstructor;
-import ${package}.admin.security.AdminAuthenticationProvider;
-import ${package}.web.config.WebSecurityConfig;
-import ${package}.web.security.AuthenticationErrorHandler;
-import ${package}.web.security.JwtAuthenticationFilter;
+import ${package}.${artifactId}.security.AdminAuthenticationProvider;
+import ${package}.webapp.config.WebSecurityConfig;
+import ${package}.webapp.security.AuthenticationErrorHandler;
+import ${package}.webapp.security.JwtAuthenticationFilter;
 
 
 @RequiredArgsConstructor

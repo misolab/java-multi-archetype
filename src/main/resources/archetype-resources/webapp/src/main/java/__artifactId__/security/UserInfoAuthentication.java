@@ -9,7 +9,7 @@ import java.util.Map;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 
-import ${package}.web.dto.UserInfo;
+import ${package}.${artifactId}.dto.UserInfo;
 
 public class UserInfoAuthentication extends AbstractAuthenticationToken {
 

@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
-import ${package}.web.exception.ForbiddenException;
-import ${package}.web.vo.ApiResponse;
+import ${package}.${artifactId}.exception.ForbiddenException;
+import ${package}.${artifactId}.vo.ApiResponse;
 
 public class AuthenticationErrorHandler implements AuthenticationEntryPoint {
 

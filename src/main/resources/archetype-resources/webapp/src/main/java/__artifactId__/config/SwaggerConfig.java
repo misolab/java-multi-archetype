@@ -6,7 +6,7 @@ package ${package}.${artifactId}.config;
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.service.ApiInfo;
-import springfox.documentation.spring.${artifactId}.plugins.Docket;
+import springfox.documentation.spring.web.plugins.Docket;
 
 public interface SwaggerConfig {
 

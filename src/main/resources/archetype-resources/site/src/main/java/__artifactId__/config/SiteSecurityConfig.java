@@ -6,7 +6,7 @@ package ${package}.${artifactId}.config;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
-import ${package}.web.config.WebSecurityConfig;
+import ${package}.webapp.config.WebSecurityConfig;
 
 @EnableWebSecurity
 public class SiteSecurityConfig extends WebSecurityConfig {

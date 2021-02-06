@@ -19,7 +19,7 @@
     <modules>
         <module>common</module>
         <module>domain</module>
-        <module>web</module>
+        <module>webapp</module>
         <module>site</module>
         <module>admin</module>
         <module>api</module>
@@ -33,7 +33,7 @@
         <!--  domain  -->
         <mybatis-spring-boot-starter.version>2.1.2</mybatis-spring-boot-starter.version>
         <mybatis-spring-boot-starter-test.version>2.1.2</mybatis-spring-boot-starter-test.version>
-        <!--  web  -->
+        <!--  webapp  -->
         <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <!--  site  -->

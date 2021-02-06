@@ -3,11 +3,10 @@
 #set( $symbol_escape = '\' )
 package ${package}.${artifactId}.config;
 
-import org.springframework.boot.${artifactId}.servlet.error.DefaultErrorAttributes;
+import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.stereotype.Component;
-import org.springframework.${artifactId}.context.request.WebRequest;
+import org.springframework.web.context.request.WebRequest;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @Component

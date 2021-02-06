@@ -19,15 +19,15 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import ${package}.admin.security.AdminAuthenticationProvider;
+import ${package}.${artifactId}.security.AdminAuthenticationProvider;
 import ${package}.domain.service.MemberService;
-import ${package}.web.dto.UserInfo;
-import ${package}.web.exception.ForbiddenException;
-import ${package}.web.security.LoginAuthentication;
-import ${package}.web.security.UserInfoAuthentication;
-import ${package}.web.util.CurrentUser;
-import ${package}.web.util.RequestUtil;
-import ${package}.web.vo.ApiResponse;
+import ${package}.webapp.dto.UserInfo;
+import ${package}.webapp.exception.ForbiddenException;
+import ${package}.webapp.security.LoginAuthentication;
+import ${package}.webapp.security.UserInfoAuthentication;
+import ${package}.webapp.util.CurrentUser;
+import ${package}.webapp.util.RequestUtil;
+import ${package}.webapp.vo.ApiResponse;
 
 @Slf4j
 @RequiredArgsConstructor

@@ -4,8 +4,8 @@
 package ${package}.${artifactId}.vo;
 
 import lombok.Getter;
-import ${package}.web.ApiStatus;
-import ${package}.web.exception.ApiException;
+import ${package}.${artifactId}.ApiStatus;
+import ${package}.${artifactId}.exception.ApiException;
 import org.springframework.http.ResponseEntity;
 
 import java.util.HashMap;

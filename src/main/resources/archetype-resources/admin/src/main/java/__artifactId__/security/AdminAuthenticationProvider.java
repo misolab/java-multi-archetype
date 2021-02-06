@@ -25,10 +25,10 @@ import ${package}.common.util.LDAPAuthenticator.Result;
 import ${package}.common.util.ListUtils;
 import ${package}.domain.entity.Member;
 import ${package}.domain.service.MemberService;
-import ${package}.web.dto.UserInfo;
-import ${package}.web.security.LoginAuthentication;
-import ${package}.web.security.UserInfoAuthentication;
-import ${package}.web.security.WebAuthenticationProvider;
+import ${package}.webapp.dto.UserInfo;
+import ${package}.webapp.security.LoginAuthentication;
+import ${package}.webapp.security.UserInfoAuthentication;
+import ${package}.webapp.security.WebAuthenticationProvider;
 
 @RequiredArgsConstructor
 @Component

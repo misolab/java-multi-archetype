@@ -83,7 +83,7 @@
       </fileSets>
     </module>
 
-    <module id="web" dir="web" name="web">
+    <module id="webapp" dir="webapp" name="webapp">
       <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">
           <directory>src/main/java</directory>
