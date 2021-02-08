@@ -43,6 +43,7 @@ public class AdminSecurityConfig extends WebSecurityConfig {
     protected void configure(HttpSecurity http) throws Exception {
         //  for h2 console
         http
+            .csrf().disable()
             .headers().frameOptions().disable()
         .and()
             .authorizeRequests()

@@ -12,8 +12,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.util.Assert;
-
 import ${package}.common.Constants;
 import ${package}.common.util.StringUtils;
 
