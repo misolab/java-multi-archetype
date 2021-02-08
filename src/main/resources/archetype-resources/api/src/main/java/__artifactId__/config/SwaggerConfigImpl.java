@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.${artifactId}.config;
 
-import ${package}.web.config.SwaggerConfig;
+import ${package}.webapp.config.SwaggerConfig;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.builders.PathSelectors;

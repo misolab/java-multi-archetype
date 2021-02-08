@@ -5,7 +5,7 @@ package ${package}.${artifactId}.controller;
 
 import lombok.RequiredArgsConstructor;
 import ${package}.common.util.DateTimeUtils;
-import ${package}.web.vo.ApiResponse;
+import ${package}.webapp.vo.ApiResponse;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
