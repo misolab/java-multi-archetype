@@ -9,6 +9,8 @@ import ${package}.${artifactId}.ApiStatus;
  * @author ock
  */
 public class BadRequestException extends ApiException {
+    private static final long serialVersionUID = 5727135242632049020L;
+
     /**
      *
      */

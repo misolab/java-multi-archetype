@@ -9,6 +9,7 @@ import ${package}.${artifactId}.ApiStatus;
  * @author ock
  */
 public class ForbiddenException extends ApiException {
+    private static final long serialVersionUID = 1078208706190054436L;
     /**
      *
      */

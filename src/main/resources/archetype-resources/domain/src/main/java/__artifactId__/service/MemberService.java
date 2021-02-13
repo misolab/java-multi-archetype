@@ -6,8 +6,8 @@ package ${package}.${artifactId}.service;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import net.joins.domain.entity.Member;
-import net.joins.domain.repository.MemberRepository;
+import ${package}.domain.entity.Member;
+import ${package}.domain.repository.MemberRepository;
 
 @RequiredArgsConstructor
 @Service

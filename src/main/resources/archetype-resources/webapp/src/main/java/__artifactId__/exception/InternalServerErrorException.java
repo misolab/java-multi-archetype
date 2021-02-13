@@ -9,6 +9,8 @@ import ${package}.${artifactId}.ApiStatus;
  * @author ock
  */
 public class InternalServerErrorException extends ApiException {
+    private static final long serialVersionUID = -5784998240975162135L;
+
     /**
      *
      */

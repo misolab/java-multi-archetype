@@ -9,6 +9,8 @@ import ${package}.${artifactId}.ApiStatus;
  * @author ock
  */
 public class ApiException extends RuntimeException {
+    private static final long serialVersionUID = 5145867487543420979L;
+
     private int code;
 
     /**

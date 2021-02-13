@@ -50,14 +50,12 @@ public class DateTimeUtils {
     }
 
     public static boolean afterDate(String d1, String d2, String format) {
-        val fmt = DateTimeFormatter.ofPattern(format);
         val std = getDate(d1, format);
         val other = getDate(d2, format);
         return std.isAfter(other);
     }
 
     public static boolean afterTime(String t1, String t2, String format) {
-        val fmt = DateTimeFormatter.ofPattern(format);
         val std = getTime(t1, format);
         val other = getTime(t2, format);
         return std.isAfter(other);

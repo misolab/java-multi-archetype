@@ -4,14 +4,12 @@
 package ${package}.${artifactId}.crypto;
 
 import ${package}.${artifactId}.util.StringUtils;
-import lombok.extern.slf4j.Slf4j;
 
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.Key;
 import java.security.spec.AlgorithmParameterSpec;
 
-@Slf4j
 public class AES extends CipherTemplate {
 
     SecretKeySpec keySpec;

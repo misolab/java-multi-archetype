@@ -9,6 +9,8 @@ import ${package}.${artifactId}.ApiStatus;
  * @author ock
  */
 public class NotFoundException extends ApiException {
+    private static final long serialVersionUID = -2344956899066064615L;
+
     /**
      *
      */
